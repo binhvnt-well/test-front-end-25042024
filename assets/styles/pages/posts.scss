@@ -2,9 +2,8 @@
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
-}
 
-.post-card {
+  .post-card {
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -16,34 +15,39 @@
         transform: translateY(-5px);
     }
 
-    .post-title {
+    .title {
         font-size: 24px;
         font-weight: bold;
-        color: #333;
         margin-bottom: 10px;
+        width: 100%;
+        white-space: nowrap;
+        overflow: hidden !important;
+        text-overflow: ellipsis;
     }
 
     .post-body {
         font-size: 16px;
         color: #555;
     }
-}
-  
-.loading {
+  }
+
+  .loading {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 200px;
-}
-  
-.loading-spinner {
+  }
+
+  .loading-spinner {
     border: 4px solid rgba(0, 0, 0, 0.1);
     border-left-color: #333;
     border-radius: 50%;
     width: 40px;
     height: 40px;
     animation: spin 1s linear infinite;
+  }
 }
+
   
 @keyframes spin {
     to {

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
+import { toast } from 'react-toastify';
 
 import { useAppSelector } from 'redux/store';
 import { storePosts } from '@/base/redux/reducers/posts.reducer';
@@ -32,6 +33,7 @@ export default function PostsComponent() {
       }
     } catch (error) {
       console.error('Error:', error);
+      toast.error('Error fetching data');
       setLoading(false);
     }
   };

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import Image from 'next/image'
 import _ from 'lodash';
+import { toast } from 'react-toastify';
 
 
 import { fetchDetailPost, fetchCommentByIdPost } from '@/api/posts';
@@ -25,10 +26,10 @@ export default function PostDetailComponent() {
     const listPosts = async () => {
       try {
         const res = await fetchDetailPost(`${id}`)
-        console.log(res.data)
         setPostDetail(res?.data)
       } catch (error) {
-        console.error('Error:', error)
+        toast.error('Error fetching data');
+        router.push('/posts');
       }
     };
 
