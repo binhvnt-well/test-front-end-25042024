@@ -54,7 +54,7 @@ const AlbumComponent = () => {
       <h1 className="text-center my-4">Albums</h1>
 
       {!albums && <Loading />}
-      <Row xs={1} md={2} lg={3} className="g-4">
+      <Row xs={1} md={2} lg={3} className="g-4  pb-3">
         {albums?.map((album) => {
           return (
             <Col key={album.id}>

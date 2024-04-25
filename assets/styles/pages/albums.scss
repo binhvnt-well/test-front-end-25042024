@@ -1,28 +1,40 @@
 .album-card {
+  height: 100%;
   .card-title {
     font-size: 18px;
     font-weight: bold;
+    color: #fff; 
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden !important;
+    text-overflow: ellipsis;
   }
 
   .card-body {
     font-family: 'Roboto', sans-serif;
     font-size: 24px;
     font-weight: bold;
-    color: #fff;
+    color: #fff; 
     text-align: center;
     padding: 20px;
     background: linear-gradient(45deg, #5fa7ff, #7bd4fe);
     border-radius: 10px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   
   .card-body:hover {
     cursor: pointer;
-    transform: scale(1.05);
+    transform: scale(1.05); 
     box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
   }
+
 }
+
 
 .photo-grid {
   display: grid;
